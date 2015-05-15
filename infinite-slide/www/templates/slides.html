@@ -1,0 +1,62 @@
+<ion-view>
+  <ion-nav-title>
+    <button
+      ng-click="showDefaultSlides()"
+      class="button button-icon button-light button-clear ion-ios-home-outline"
+      style="padding-top:5px;">
+    </button>
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button
+      ng-click="previous()"
+      class="button button-light button-clear no-animation">
+      <b>Previous</b>
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button
+      ng-click="showDetails()"
+      class="button button-icon button-light button-clear ion-ios-information-outline"
+      style="padding-right:15px;">
+    </button>
+    <button
+      ng-click="next()"
+      class="button button-light button-clear no-animation"
+      style="padding-left:15px;">
+      <b>Next</b>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content scroll="false">
+    <!-- Setting default background color to one of the two colors of our slides in order to hide the fact that vary fast sliding will momentarily show white regions -->
+    <ion-slide-box
+      style="height:100%; background:#8080c5;"
+      on-slide-changed="slideChanged($index)"
+      active-slide="selectedSlide"
+      does-continue="true"
+      show-pager="false">
+
+      <ion-slide ng-repeat="slide in slides">
+        <div
+          style="height:100%;"
+          ng-style="{background:slide.color}">
+          <div class="slide-header-text text-center light padding">
+            {{slide.title}}
+          </div>
+          <div class="slide-content-text text-center light">
+            {{slide.nr}}
+          </div>
+          <div class="slide-footer-text text-center light padding">
+            index {{$index}} / length {{slides.length}}
+          </div>
+        </div>
+      </ion-slide>
+
+    </ion-slide-box>
+  </ion-content>
+
+  <ion-footer-bar align-title="left" class="bar-dark">
+    <div class="title" style="color:#999;">made by <a href="https://twitter.com/zarkoh" target="_blank">zarko</a>; forum <a href="http://forum.ionicframework.com/t/dynamic-slides/8002" target="_blank">thread</a></div>
+  </ion-footer-bar>
+
+</ion-view>

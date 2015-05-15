@@ -1,0 +1,32 @@
+# node
+node_modules
+
+# NPM debug log
+npm-debug.log
+
+# mongodb
+data
+
+# SublimeText project files
+/*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+
+# webstorm
+.idea
+
+# sass
+.sass-cache
+
+# psd
+psd
+*.psd
+
+.DS_Store
+*.DS_Store
+*[Tt]humbs.db
+*.Trashes
+*.map
+._*

@@ -1,0 +1,26 @@
+body {
+  cursor : url('http://ionicframework.com/img/finger.png'), auto;
+}
+
+.slide-content-text {
+  position          : relative;
+  top               : 50%;
+  transform         : translateY(-50%);
+  -webkit-transform : translateY(-50%);
+  font-size         : 5em;
+}
+
+.slide-header-text {
+  position      : absolute;
+  left          : 0;
+  right         : 0;
+  border-bottom : 5px dotted lightgray;
+}
+
+.slide-footer-text {
+  position   : absolute;
+  bottom     : 0;
+  left       : 0;
+  right      : 0;
+  border-top : 5px dotted lightgray;
+}
