@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+
+    <!-- your app's js -->
+    <script src="js/ion-side-menu.js"></script>
+</head>
+<body ng-app="sideMenu">
+
+
+
+    <ion-side-menus>
+        <!-- left side menu -->
+        <ion-side-menu side="left">
+            side-menu
+        </ion-side-menu>
+
+        <!-- center content-->
+        <ion-side-menu-content ng-controller="contentCtrl" drag-content="false">
+
+            <ion-nav-bar class="bar-positive">
+                <ion-nav-back-button>
+                </ion-nav-back-button>
+
+                <ion-nav-buttons side="left">
+                    <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+
+            <ion-nav-view></ion-nav-view>
+
+        </ion-side-menu-content>
+    </ion-side-menus>
+
+
+    <!-- inline template -->
+    <script id="home" type="text/ng-template">
+        <ion-view view-title="home">
+            <ion-content class="has-header" overflow-scroll="false" has-bouncing="true">
+                <a href="#/about" class="button button-assertive">about</a>
+                <a href="#/scroll" class="button button-assertive">scroll</a>
+            </ion-content>
+        </ion-view>
+    </script>
+
+    <script id="about" type="text/ng-template">
+        <ion-view view-title="about">
+            <ion-content class="has-header" overflow-scroll="false" has-bouncing="true">
+                <a href="#" class="button button-positive">home</a>
+            </ion-content>
+        </ion-view>
+    </script>
+
+    <script id="scroll" type="text/ng-template">
+        <ion-view view-title="scroll">
+            <ion-scroll zooming="true" direction="xy" style="width: 500px; height: 500px">
+                <div style="width: 5000px; height: 5000px; background: url('img/IMG_8003.png') repeat"> </div>
+                <!--<div style="width: 5000px; height: 5000px; background: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/Europe_geological_map-en.jpg') repeat"></div>-->
+                <!--<img src="img/IMG_8003.png" alt="" style="width:100%;height: auto"/>-->
+                <!--<img src="img/IMG_8003.png" alt=""/>-->
+            </ion-scroll>
+        </ion-view>
+    </script>
+
+
+
+
+</body>
+</html>
