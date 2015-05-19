@@ -1,0 +1,124 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-android3:before {
+	content: "\e000";
+}
+.flaticon-apple4:before {
+	content: "\e001";
+}
+.flaticon-baseball28:before {
+	content: "\e002";
+}
+.flaticon-basketball35:before {
+	content: "\e003";
+}
+.flaticon-beer17:before {
+	content: "\e004";
+}
+.flaticon-black170:before {
+	content: "\e005";
+}
+.flaticon-books8:before {
+	content: "\e006";
+}
+.flaticon-calendar68:before {
+	content: "\e007";
+}
+.flaticon-desktop:before {
+	content: "\e008";
+}
+.flaticon-dolphin1:before {
+	content: "\e009";
+}
+.flaticon-dove:before {
+	content: "\e00a";
+}
+.flaticon-finish:before {
+	content: "\e00b";
+}
+.flaticon-google117:before {
+	content: "\e00c";
+}
+.flaticon-jacket2:before {
+	content: "\e00d";
+}
+.flaticon-js1:before {
+	content: "\e00e";
+}
+.flaticon-magic4:before {
+	content: "\e00f";
+}
+.flaticon-medical45:before {
+	content: "\e010";
+}
+.flaticon-memory1:before {
+	content: "\e011";
+}
+.flaticon-paint41:before {
+	content: "\e012";
+}
+.flaticon-paw1:before {
+	content: "\e013";
+}
+.flaticon-pc6:before {
+	content: "\e014";
+}
+.flaticon-python1:before {
+	content: "\e015";
+}
+.flaticon-recognition6:before {
+	content: "\e016";
+}
+.flaticon-ring5:before {
+	content: "\e017";
+}
+.flaticon-round54:before {
+	content: "\e018";
+}
+.flaticon-rugby98:before {
+	content: "\e019";
+}
+.flaticon-science:before {
+	content: "\e01a";
+}
+.flaticon-share4:before {
+	content: "\e01b";
+}
+.flaticon-shield65:before {
+	content: "\e01c";
+}
+.flaticon-soccer19:before {
+	content: "\e01d";
+}
+.flaticon-symbol:before {
+	content: "\e01e";
+}
+.flaticon-television4:before {
+	content: "\e01f";
+}
+.flaticon-tennis18:before {
+	content: "\e020";
+}
+.flaticon-tree101:before {
+	content: "\e021";
+}
+.flaticon-whatsapp:before {
+	content: "\e022";
+}
+.flaticon-wide6:before {
+	content: "\e023";
+}

@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "whip";
+	src: url("./whip-font/whip.eot");
+	src: url("./whip-font/whip.woff") format("woff"),
+	url("./whip-font/whip.ttf") format("truetype"),
+	url("./whip-font/whip.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="whip-"]:before, [class*=" whip-"]:before,
+[class^="whip-"]:after, [class*=" whip-"]:after {   
+	font-family: whip;
+font-style: normal;
+font-size: 37px !important;
+}.whip-whip:before {
+	content: "\e000";
+}

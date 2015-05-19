@@ -1,0 +1,24 @@
+*.keystore
+*.sw*
+platforms/^.*
+
+.remote-sync.json
+sftp-config.json
+Thumbs.db
+Icon
+
+lib_B13/
+lib_B13/^.*
+
+lib_/
+lib_/^.*
+
+docs/
+docs/^.*
+
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+node_modules/
+platforms/
+plugins/

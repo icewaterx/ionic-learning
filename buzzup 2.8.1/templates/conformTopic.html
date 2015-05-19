@@ -1,0 +1,18 @@
+<ion-modal-view><ion-header-bar class="bar bar-header bar-positive big-bar"><button class="rotate-side-buttons button button-icon icon ion-arrow-left-c" ng-click="hideTheModal()"></button><h1 class="title header-padding-top">{{topicName}}</h1></ion-header-bar><ion-content class="spc-from-header" ng-class="{
+      artsbg : isArtsBg,
+      businessbg : isBusinessBg, 
+      edubg : isEduBg, 
+      gamesbg : isGamesBg,
+      geobg : isGeoBg, 
+      historybg : isHistoryBg,
+      litbg :  isLitBg,
+      lifestylebg : isLifestyleBg,
+      moviebg : isMovieBg,
+      musicbg : isMusicBg,
+      naturebg : isNatureBg, 
+      peoplebg : isPeopleBg, 
+      sciencebg : isScienceBg,
+      sportsbg : isSportsBg,
+      techbg : isTechBg,
+      tvbg : isTvBg
+      }"><div><img ng-src="{{imgsrc}}" class="confirm-topic-img"></div></ion-content><div class="tabs tabs-indigo"><i class="icon ion-arrow-right-b start-match-cutter scale-side-buttons" ng-click="goToGame()"></i> <a class="tab-item "><span class="start-match-text">{{ playingText }}</span></a></div></ion-modal-view>

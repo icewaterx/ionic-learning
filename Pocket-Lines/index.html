@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+		<title>Pocket Lines123</title>
+
+		<link href="lib/css/ionic.css" rel="stylesheet">
+		<link href="lib/css/autocomplete.min.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet">
+
+		<!-- ionic/angularjs scripts -->
+		<script src="lib/js/ionic.bundle.min.js"></script>
+		<script src="lib/js/angular-translate.min.js"></script>
+
+		<!-- app scripts & controllers -->
+		<script src="js/app.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/factories.js"></script>
+
+		<script src="js/homeCtrl.js"></script>
+		<script src="js/avisosCtrl.js"></script>
+		<script src="js/favoritosCtrl.js"></script>
+		<script src="js/lineasCtrl.js"></script>
+		<script src="js/mapCtrl.js"></script>
+		<script src="js/llegarCtrl.js"></script>
+		<script src="js/tibTrenCtrl.js"></script>
+
+		<script src="lang/es.js"></script>
+		<script src="lang/en.js"></script>
+		<script src="lang/ca.js"></script>
+
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+
+		<!-- Cordova --
+		<script src="lib/js/ng-cordova.min.js"></script> -->
+		<script src="cordova.js"></script>
+
+	</head>
+
+	<body ng-app="PL" style="background-color: black;">
+
+		<ion-side-menus>
+			<!-- Center content -->
+			<ion-side-menu-content ion-pane edge-drag-threshold="40" style="background-color: #efefef;" ng-class="{'tabs-top': tabs }"> <!--  -->
+				<ion-nav-bar class="bar-positive" align-title="left"> <!-- ng-class="{'has-tabs-top': tabs }"-->
+					<ion-nav-back-button class="button-icon ion-android-arrow-back"></ion-nav-back-button>
+					<ion-nav-buttons side="left">
+						<button class="button button-icon ion-navicon" menu-toggle="left"></button>
+					</ion-nav-buttons>
+				</ion-nav-bar>
+
+				<ion-nav-view ></ion-nav-view>
+			</ion-side-menu-content>
+
+			<!-- Left menu -->
+			<ion-side-menu side="left" is-enabled="true" class="menu" ng-controller="LeftMenuCtrl">
+				<div class="bar bar-header bar-dark">
+					<h1 class="title">Pocket Lines</h1>
+				</div>
+				<ion-content class="has-header" overflow-scroll="true">
+
+					<ion-list>
+
+						<ion-item item-type="item-icon-left" nav-clear menu-close href="#/home" ng-class="{active: isItemActive('/home')}">
+							<i class="icon ion-android-search" style="font-size: 17px; margin-left: 3px;"></i>
+							{{ 'MENU_HOME' | translate}}
+						</ion-item>
+
+						<ion-item item-type="item-icon-left" nav-clear menu-close href="#/favoritos" ng-class="{active: isItemActive('/favoritos')}">
+							<i class="icon ion-heart"></i>
+							{{ 'MENU_FAVORITOS' | translate}}
+						</ion-item>
+
+						<div ng-if="user.EMT">
+
+							<div class="item item-divider">
+								EMT PALMA
+							</div>
+
+							<ion-item item-type="item-icon-left" nav-clear menu-close href="#/llegar" ng-class="{active: isItemActive('/llegar')}" style="display:none;">
+								<i class="icon ion-navigate"></i>
+								{{ 'MENU_LLEGAR' | translate}}
+							</ion-item>
+
+							<ion-item item-type="item-icon-left" nav-clear menu-close href="#/cercanas" ng-class="{active: isItemActive('/cercanas')}">
+								<i class="icon ion-android-map"></i>
+								{{ 'MENU_CERCANAS' | translate}}
+							</ion-item>
+
+							<ion-item item-type="item-icon-left" nav-clear menu-close href="#/lineas" ng-class="{active: isItemActive('/lineas')}">
+								<i class="icon ion-android-bus"></i>
+								{{ 'MENU_LINEAS' | translate}}
+							</ion-item>
+
+							<ion-item item-type="item-icon-left" nav-clear menu-close href="#/tarifas" ng-class="{active: isItemActive('/tarifas')}">
+								<i class="icon ion-card"></i>
+								{{ 'MENU_TARIFAS' | translate}}
+							</ion-item>
+
+							<ion-item item-type="item-icon-left" nav-clear menu-close href="#/avisos" ng-class="{active: isItemActive('/avisos')}">
+								<i class="icon ion-flag"></i>
+								{{ 'MENU_AVISOS' | translate}}
+								<span class="badge badge-assertive">{{server.avisos}}</span>
+							</ion-item>
+
+						</div>
+
+						<!--
+						<div ng-if="user.TIB">
+							<div class="item item-divider">
+								TIB
+							</div>
+
+							<ion-item item-type="item-icon-left" nav-clear menu-close href="#/tib_tren_lineas" ng-class="{active: isItemActive('/tib_tren_lineas')}">
+								<i class="icon ion-merge"></i>
+									Líneas de Tren y Metro
+							</ion-item>
+
+							<ion-item item-type="item-icon-left" nav-clear menu-close href="#/home" style="display:none;">
+								<i class="icon ion-location"></i>
+								<s>TIB info precio billete</s>
+							</ion-item>
+						</div>
+						-->
+
+						<div class="item item-divider">
+							TAXIS
+						</div>
+
+						<ion-item item-type="item-icon-left" nav-clear menu-close href="#/taxis" ng-class="{active: isItemActive('/taxis')}">
+							<i class="icon ion-android-car"></i>
+							Taxis
+						</ion-item>
+
+						<div class="item item-divider">
+							{{ 'MENU_AJUSTES_DIVIDER' | translate}}
+						</div>
+
+						<ion-item item-type="item-icon-left" nav-clear menu-close href="#/ajustes" ng-class="{active: isItemActive('/ajustes')}">
+							<i class="icon ion-android-settings"></i>
+							{{ 'MENU_AJUSTES' | translate}}
+						</ion-item>
+
+						<ion-item item-type="item-icon-left" nav-clear menu-close href="#/about" ng-class="{active: isItemActive('/about')}">
+							<i class="icon ion-grid"></i>
+							{{ 'MENU_ABOUT' | translate}}
+						</ion-item>
+
+					</ion-list>
+
+				</ion-content>
+			</ion-side-menu>
+
+		</ion-side-menus>
+	</body>
+</html>
