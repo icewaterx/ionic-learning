@@ -27,7 +27,8 @@ angular.module('ionicApp', ['ionic'])
     default_slides_indexes = [ -1, 0, 1 ],
     default_slides = [
       makeSlide( default_slides_indexes[ 0 ], {
-        title : 'default slide', get color () { return getColor( this.nr ) }
+        title : 'default slide',
+        get color () { return getColor( this.nr ) }
       }),
       makeSlide( default_slides_indexes[ 1 ], {
         title : 'default slide', get color () { return getColor( this.nr ) }
