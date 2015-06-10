@@ -44,7 +44,8 @@
             {{slide.title}}
           </div>
           <div class="slide-content-text text-center light">
-            {{slide.nr}}
+            {{slide.nr}} <br/>
+            <div ng-include="'templates/' + slide.nr + '.html'"></div>
           </div>
           <div class="slide-footer-text text-center light padding">
             index {{$index}} / length {{slides.length}}
